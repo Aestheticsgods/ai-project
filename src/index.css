@@ -1,0 +1,261 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* SKAINET Dark Futuristic Theme */
+    --background: 220 20% 4%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 20% 6%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 20% 6%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 142 71% 45%;
+    --primary-foreground: 220 20% 4%;
+
+    --secondary: 220 20% 12%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 215 20% 55%;
+
+    --accent: 200 100% 50%;
+    --accent-foreground: 220 20% 4%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 142 71% 45%;
+
+    --radius: 0.75rem;
+
+    /* Custom SKAINET colors */
+    --neon-green: 142 71% 45%;
+    --neon-blue: 200 100% 50%;
+    --neon-purple: 270 100% 65%;
+    --neon-cyan: 180 100% 50%;
+    
+    /* Glass effects */
+    --glass-bg: 220 20% 8% / 0.6;
+    --glass-border: 220 15% 25% / 0.3;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(142 71% 45%), hsl(180 100% 40%));
+    --gradient-accent: linear-gradient(135deg, hsl(200 100% 50%), hsl(270 100% 65%));
+    --gradient-dark: linear-gradient(180deg, hsl(220 20% 4%), hsl(220 20% 8%));
+    
+    /* Shadows & Glows */
+    --glow-green: 0 0 30px hsl(142 71% 45% / 0.4);
+    --glow-blue: 0 0 30px hsl(200 100% 50% / 0.4);
+    --glow-purple: 0 0 30px hsl(270 100% 65% / 0.4);
+
+    --sidebar-background: 220 20% 5%;
+    --sidebar-foreground: 210 40% 90%;
+    --sidebar-primary: 142 71% 45%;
+    --sidebar-primary-foreground: 220 20% 4%;
+    --sidebar-accent: 220 15% 12%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 15% 15%;
+    --sidebar-ring: 142 71% 45%;
+  }
+
+  .dark {
+    --background: 220 20% 4%;
+    --foreground: 210 40% 98%;
+    --card: 220 20% 6%;
+    --card-foreground: 210 40% 98%;
+    --popover: 220 20% 6%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 142 71% 45%;
+    --primary-foreground: 220 20% 4%;
+    --secondary: 220 20% 12%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 15% 15%;
+    --muted-foreground: 215 20% 55%;
+    --accent: 200 100% 50%;
+    --accent-foreground: 220 20% 4%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 142 71% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+@layer components {
+  /* Grid background pattern */
+  .grid-pattern {
+    background-image: 
+      linear-gradient(hsl(var(--border) / 0.3) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.3) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Glassmorphism card */
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-xl border border-border/50 rounded-xl;
+    box-shadow: 0 8px 32px hsl(0 0% 0% / 0.3);
+  }
+
+  /* Neon glow effects */
+  .glow-green {
+    box-shadow: var(--glow-green);
+  }
+
+  .glow-blue {
+    box-shadow: var(--glow-blue);
+  }
+
+  .glow-purple {
+    box-shadow: var(--glow-purple);
+  }
+
+  /* Neon text */
+  .text-glow-green {
+    text-shadow: 0 0 20px hsl(var(--neon-green) / 0.6);
+  }
+
+  .text-glow-blue {
+    text-shadow: 0 0 20px hsl(var(--neon-blue) / 0.6);
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  .gradient-text-accent {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-accent);
+  }
+
+  /* Animated border */
+  .border-glow {
+    @apply relative;
+  }
+
+  .border-glow::before {
+    content: '';
+    @apply absolute inset-0 rounded-xl opacity-0 transition-opacity duration-300;
+    background: var(--gradient-primary);
+    padding: 1px;
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  .border-glow:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Hover scale animation */
+  .hover-lift {
+    @apply transition-all duration-300;
+  }
+
+  .hover-lift:hover {
+    @apply -translate-y-1;
+    box-shadow: 0 20px 40px hsl(0 0% 0% / 0.4);
+  }
+
+  /* Pulse animation for active elements */
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(var(--neon-green) / 0.4);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(var(--neon-green) / 0.6);
+    }
+  }
+
+  /* Fade in animation */
+  .fade-in {
+    animation: fade-in 0.5s ease-out forwards;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Slide in from left */
+  .slide-in-left {
+    animation: slide-in-left 0.4s ease-out forwards;
+  }
+
+  @keyframes slide-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Stagger children animation */
+  .stagger-children > * {
+    opacity: 0;
+    animation: fade-in 0.5s ease-out forwards;
+  }
+
+  .stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+  .stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+  .stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+  .stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+  .stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
+  .stagger-children > *:nth-child(6) { animation-delay: 0.6s; }
+  .stagger-children > *:nth-child(7) { animation-delay: 0.7s; }
+  .stagger-children > *:nth-child(8) { animation-delay: 0.8s; }
+}
+
+@layer utilities {
+  /* Scrollbar styling */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-muted/30 rounded-full;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/30 rounded-full;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+}

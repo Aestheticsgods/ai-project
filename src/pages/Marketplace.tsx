@@ -35,7 +35,7 @@ const marketplaceAgents = [
     rating: 4.8,
     reviews: 189,
     downloads: 9800,
-    price: "50 SKAI",
+    price: "50 RIV",
     trending: true,
   },
   {
@@ -47,7 +47,7 @@ const marketplaceAgents = [
     rating: 4.7,
     reviews: 156,
     downloads: 7600,
-    price: "75 SKAI",
+    price: "75 RIV",
     trending: false,
   },
   {
@@ -59,7 +59,7 @@ const marketplaceAgents = [
     rating: 4.6,
     reviews: 98,
     downloads: 5400,
-    price: "25 SKAI",
+    price: "25 RIV",
     trending: false,
   },
   {
@@ -83,7 +83,7 @@ const marketplaceAgents = [
     rating: 4.5,
     reviews: 87,
     downloads: 4200,
-    price: "100 SKAI",
+    price: "100 RIV",
     trending: false,
   },
 ];

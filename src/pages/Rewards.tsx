@@ -17,7 +17,7 @@ const rewardHistory = [
     type: "earned",
     title: "Intent Processing Reward",
     description: "DataMiner Pro completed 50 intents",
-    amount: "+125 SKAI",
+    amount: "+125 RIV",
     date: "2 hours ago",
   },
   {
@@ -25,7 +25,7 @@ const rewardHistory = [
     type: "earned",
     title: "Collaboration Bonus",
     description: "Multi-agent task completion",
-    amount: "+75 SKAI",
+    amount: "+75 RIV",
     date: "5 hours ago",
   },
   {
@@ -33,7 +33,7 @@ const rewardHistory = [
     type: "spent",
     title: "Agent Upgrade",
     description: "NLP Specialist Pro License",
-    amount: "-50 SKAI",
+    amount: "-50 RIV",
     date: "1 day ago",
   },
   {
@@ -41,7 +41,7 @@ const rewardHistory = [
     type: "earned",
     title: "Network Contribution",
     description: "Weekly staking rewards",
-    amount: "+200 SKAI",
+    amount: "+200 RIV",
     date: "2 days ago",
   },
   {
@@ -49,7 +49,7 @@ const rewardHistory = [
     type: "earned",
     title: "Referral Reward",
     description: "New user joined via your link",
-    amount: "+50 SKAI",
+    amount: "+50 RIV",
     date: "3 days ago",
   },
 ];
@@ -70,7 +70,7 @@ export default function Rewards() {
           <div>
             <h1 className="text-3xl font-bold">Rewards & Earnings</h1>
             <p className="text-muted-foreground">
-              Track your SKAI token earnings and rewards history
+              Track your RIV token earnings and rewards history
             </p>
           </div>
           <div className="flex gap-2">
@@ -91,7 +91,7 @@ export default function Rewards() {
             <div className="flex items-start justify-between mb-6">
               <div>
                 <p className="text-sm text-muted-foreground mb-1">Total Balance</p>
-                <h2 className="text-4xl font-bold text-primary">2,450 SKAI</h2>
+                <h2 className="text-4xl font-bold text-primary">2,450 RIV</h2>
                 <p className="text-sm text-muted-foreground mt-1">≈ $1,225.00 USD</p>
               </div>
               <div className="p-3 bg-primary/10 rounded-xl">
@@ -112,7 +112,7 @@ export default function Rewards() {
                   <Clock size={16} />
                   <span className="text-sm font-medium">Pending</span>
                 </div>
-                <p className="text-lg font-semibold">125 SKAI</p>
+                <p className="text-lg font-semibold">125 RIV</p>
                 <p className="text-xs text-muted-foreground">Processing</p>
               </div>
             </div>
@@ -125,7 +125,7 @@ export default function Rewards() {
                 <div key={item.label}>
                   <div className="flex justify-between text-sm mb-1">
                     <span>{item.label}</span>
-                    <span className="font-medium">{item.value} SKAI</span>
+                    <span className="font-medium">{item.value} RIV</span>
                   </div>
                   <div className="h-2 bg-secondary rounded-full overflow-hidden">
                     <div
@@ -144,7 +144,7 @@ export default function Rewards() {
           <button className="glass-card p-6 text-left hover:border-primary/40 transition-colors group">
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="font-semibold mb-1">Stake SKAI</h3>
+                <h3 className="font-semibold mb-1">Stake RIV</h3>
                 <p className="text-sm text-muted-foreground">Earn up to 12% APY</p>
               </div>
               <ChevronRight
@@ -157,7 +157,7 @@ export default function Rewards() {
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="font-semibold mb-1">Refer Friends</h3>
-                <p className="text-sm text-muted-foreground">Earn 50 SKAI per referral</p>
+                <p className="text-sm text-muted-foreground">Earn 50 RIV per referral</p>
               </div>
               <ChevronRight
                 size={20}

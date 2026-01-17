@@ -23,7 +23,7 @@ const agents = [
     status: "active",
     uptime: "99.2%",
     intents: 1245,
-    earnings: "1,245 SKAI",
+    earnings: "1,245 RIV",
     rating: 4.9,
   },
   {
@@ -33,7 +33,7 @@ const agents = [
     status: "active",
     uptime: "98.1%",
     intents: 892,
-    earnings: "892 SKAI",
+    earnings: "892 RIV",
     rating: 4.8,
   },
   {
@@ -43,7 +43,7 @@ const agents = [
     status: "paused",
     uptime: "95.4%",
     intents: 654,
-    earnings: "654 SKAI",
+    earnings: "654 RIV",
     rating: 4.7,
   },
   {
@@ -53,7 +53,7 @@ const agents = [
     status: "active",
     uptime: "97.8%",
     intents: 521,
-    earnings: "521 SKAI",
+    earnings: "521 RIV",
     rating: 4.6,
   },
   {
@@ -63,7 +63,7 @@ const agents = [
     status: "active",
     uptime: "96.5%",
     intents: 432,
-    earnings: "432 SKAI",
+    earnings: "432 RIV",
     rating: 4.5,
   },
 ];

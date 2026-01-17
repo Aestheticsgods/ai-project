@@ -68,7 +68,7 @@ export default function Settings() {
                 id="bio"
                 rows={3}
                 className="w-full px-3 py-2 bg-secondary/50 border border-border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-ring"
-                defaultValue="AI enthusiast building decentralized agents on SKAINET."
+                defaultValue="AI enthusiast building decentralized agents on Rivoxa."
               />
             </div>
           </div>
@@ -151,7 +151,7 @@ export default function Settings() {
               <div>
                 <p className="font-medium">Reward Alerts</p>
                 <p className="text-sm text-muted-foreground">
-                  Get notified when you earn SKAI tokens
+                  Get notified when you earn RIV tokens
                 </p>
               </div>
               <Switch

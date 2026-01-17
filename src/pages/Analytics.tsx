@@ -190,7 +190,7 @@ export default function Analytics() {
                       border: "1px solid hsl(220, 15%, 18%)",
                       borderRadius: "8px",
                     }}
-                    formatter={(value) => [`${value} SKAI`, "Earnings"]}
+                    formatter={(value) => [`${value} RIV`, "Earnings"]}
                   />
                   <Area
                     type="monotone"
